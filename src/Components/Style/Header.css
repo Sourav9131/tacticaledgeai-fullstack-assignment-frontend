@@ -1,0 +1,90 @@
+/* Header Wrapper */
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 100px;
+  background-color: #093545;
+}
+
+/* Left Section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Back Button */
+.header-left button {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header-left button svg {
+  width: 22px;
+  height: 22px;
+  stroke: #ffffff;
+  fill: none;
+}
+
+/* Title */
+.header-left h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+/* Logout Button */
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  opacity: 0.85;
+}
+
+/* Tablet */
+@media (max-width: 968px) {
+  header.header {
+    padding: 20px 40px;
+  }
+
+  .header-left h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  header.header {
+    padding: 16px 20px;
+  }
+
+  .header-left h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .logout-button {
+    font-size: 14px;
+  }
+}
