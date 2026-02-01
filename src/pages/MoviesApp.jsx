@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import "../Components/Style/movies.css";
 import { getToken } from "../utiles/auth";
 
+const BASE_URL = process.env.REACT_APP_BASE_URL || "https://tacticaledgeai-fullstack-assignment-production.up.railway.app/api/v1"
+
+
 export default function MoviesApp() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000/api/v1"
 
   useEffect(() => {
   const fetchMovies = async () => {
@@ -47,6 +49,13 @@ export default function MoviesApp() {
     return (
       <div className="api-response">
         <p>Loading movies...</p>
+      </div>
+    );
+
+      if (error)
+    return (
+      <div className="api-response">
+        <p>Error: {error}</p>
       </div>
     );
 
